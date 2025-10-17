@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C++: build active file",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/.vscode/build/${relativeFileDirname}\" && clang++ -g -std=c++11 -Wall -Wextra \"${file}\" -o \"${workspaceFolder}/.vscode/build/${relativeFileDirname}/${fileBasenameNoExtension}\"",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}

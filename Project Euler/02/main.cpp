@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int sum(int n);
-int fib(int n);
+long long sum(int n);
+long long fib(int n);
 
-const int N = 4000000;
+const long long N = 4000000;
 
 int main() {
 
@@ -15,9 +15,9 @@ int main() {
 	return 0;
 }
 
-int sum(int n) {
+long long sum(int n) {
 
-	int sum = 0; // suma de los terminos pares
+	long long sum = 0; // suma de los terminos pares
 
 	while (fib(n) < N) {
 
@@ -32,12 +32,12 @@ int sum(int n) {
 	return sum;
 }
 
-int fib(int n) {
+long long fib(int n) {
 
-	int a = 0; // anterior
-	int b = 1; // posterior
-	int c = 0; // suma de a+b
-	int i = 1; // contador
+	long long a = 0; // anterior
+	long long b = 1; // posterior
+	long long c = 0; // suma de a+b
+	long long i = 1; // contador
 
 	while (i <= n) {
 
@@ -50,4 +50,3 @@ int fib(int n) {
 
 	return c;
 }
-
